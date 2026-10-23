@@ -1,0 +1,6 @@
+#Gitの管理対象から除外
+.vscode/
+script-backup.js
+.env
+.env.*
+node_modules/

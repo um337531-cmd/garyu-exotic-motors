@@ -1,0 +1,746 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: Arial;
+}
+
+.top-header{
+    min-height: 100vh;
+    background-image: url(super-car.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    list-style: none;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 1px solid black;
+    padding: 10px 20px;
+    position: relative;
+    letter-spacing: 2px;
+    transition: 0.8s;
+}
+
+.menu a::after{
+    content: "";
+    position: absolute;
+    border: 1px solid black;
+    inset: 0;
+    transform: translate(8px, 8px);
+    pointer-events: none;
+}
+
+.menu a:hover{
+    background-color: black;
+    color: orangered;
+}
+
+.main-nav{
+    background-color: orangered;
+    padding: 50px;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.home-lambo{
+    position: relative;
+    opacity: 0;
+    transition: opacity 2s ease;
+    display: flex;
+    flex-direction: row-reverse;
+    min-height: 500px;
+}
+
+.home-lambo::after{
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    width: 3px;
+    height: 100%;
+    left: 47%;
+    transform: rotate(10deg);
+    top: 0;
+}
+
+.home-lambo::before{
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    width: 1px;
+    height: 60%;
+    transform: rotate(-30deg);
+    left: 50%;
+    z-index: 2;
+}
+
+.home-lambo h2{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    color: orangered;
+    font-size: 70px;
+    letter-spacing: 4px;
+    font-weight: 900;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 10px;
+    padding: 40px;
+    text-align: center;
+}
+
+.home-lambo img{
+    display: block;
+    width: 50%;
+    object-fit: cover;
+    object-position: left center;
+    clip-path: polygon(0 0,100% 0,94% 20%,100% 35%,91% 55%,97% 70%,85% 100%,0 100%
+    );
+    position: relative;
+}
+
+.home-ferrari{
+    position: relative;
+    opacity: 0;
+    transition: opacity 2.5s ease;
+    display: flex;
+}
+
+ferrari-copy{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.home-ferrari p{
+    font-size: 40px;
+    font-family: "Yu Mincho",serif;
+    color: orangered;
+    width: 100%;
+    transform: translateX(30px);
+    position: relative;
+    top: 40px;
+}
+
+.home-ferrari img{
+    display: block;
+    margin-left: auto;
+    width: 50%;
+    object-fit: cover;
+    clip-path: polygon(12% 0,100% 0,100% 100%,0 100%);
+}
+
+.home-ferrari::after{
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    width: 3px;
+    height: 100%;
+    left: 50%;
+    transform: rotate(-7deg);
+}
+
+.home-ferrari::before{
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    width: 1px;
+    height: 80%;
+    left: 665px;
+    transform: rotate(35deg);
+
+}
+
+.show{
+    opacity: 1;
+}
+
+#stock h2{
+    font-size: 60px;
+    color: orangered;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#stock p{
+    text-align: center;
+}
+
+.premium-cars{
+    display: flex;
+    gap: 30px;
+}
+
+.car-card{
+    flex: 1;
+    padding: 20px;
+    border: 2px solid orangered;
+}
+
+.car-card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.car-card p::first-child{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.car-card p{
+    font-size: 30px;
+}
+
+#custom h2{
+    font-size: 60px;
+    color: orangered;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#custom p{
+    text-align: center;
+    color: orangered;
+}
+
+.body-kit img{
+    height: 250px;
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.body-kit img:first-child{
+    object-position: center 70%;
+}
+
+.body-kit img.active{
+    opacity: 1;
+}
+
+.body-kit-track{
+    position: relative;
+    height: 250px;
+}
+
+@keyframes bodyKitSlide{
+    0%{
+        transform: translateX(0);
+    }
+        100%{
+            transform: translateX(-100%);
+        }
+}
+
+.wheels img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+    top: 0;
+    left: 0;
+    position: absolute;
+
+}
+
+.wheels img.active{
+    opacity: 1;
+}
+
+.wheels-track{
+    position: relative;
+    height: 250px;
+}
+
+.paint-track img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.paint img.active{
+    opacity: 1;
+}
+
+.paint-track{
+    position: relative;
+    height: 250px;
+}
+
+.paint-track img:first-child{
+    object-position: center 70%;
+}
+
+.paint-track img:last-child{
+    object-position: center 60%;
+}
+
+.interior-track img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.interior img.active{
+    opacity: 1;
+}
+
+.interior-track{
+    position: relative;
+    height: 250px;
+}
+
+.interior-track img:first-child{
+    object-position: center 60%;
+}
+
+.interior-track img:nth-child(2){
+    object-position: 25%;
+}
+
+.interior-track img:last-child{
+    object-position: center 60%;
+}
+
+#about{
+    padding: 80px 0;
+}
+
+#about h2{
+    text-align: center;
+    font-size: 60px;
+    color: orangered;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#about img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.4;
+}
+
+.about-content{
+    position: relative;
+}
+
+.about-content p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 37px;
+    color:white;
+    font-family: "Yu Mincho","Hiragino Mincho ProN",serif;
+}
+
+.about-content::before{
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 3px;
+    background-color: orangered;
+    top: 42%;
+    left: -200px;
+    transform: rotate(-60deg);
+}
+
+.about-content::after{
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 3px;
+    background-color: orangered;
+    top: 30%;
+    left: -30px;
+    transform: rotate(20deg);
+}
+
+.about-line-right::before{
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 3px;
+    background-color: orangered;
+    top: 70%;
+    right: -13px;
+    transform: rotate(25deg);
+}
+
+.about-line-right::after{
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 3px;
+    background-color: orangered;
+    top: 70%;
+    right: -60px;
+    transform: rotate(-45deg);
+}
+
+#contact h2{
+    text-align: center;
+    font-size: 60px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: orangered;
+}
+
+#contact > p{
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+#contact{
+    padding: 80px,0;
+}
+#contact form{
+    max-width: 600px;
+    margin: auto;
+}
+
+#contact input{
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#contact label{
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#contact select{
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#contact textarea{
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    background-color: #1a1a1a;
+    color: white;
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact button{
+    width: 100%;
+    padding: 15px 20px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+#contact button:hover{
+    background-color: #ffffff;
+    color: #111111;
+}
+
+footer{
+    background-color: #111;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+footer a:hover{
+    color: orangered;
+}
+
+@media screen and (max-width: 768px){
+   .top-header{
+    padding: 0;
+    min-height: 35vh;
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: black;
+    justify-content: flex-start;
+   }
+
+   .top-header h1{
+    font-size: 24px;
+   }
+
+   .main-nav .menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+   }
+
+   .menu a{
+    font-size: 16px;
+    padding: 8px 10px;
+    letter-spacing: 1px;
+   }
+
+   .main-nav{
+    padding: 15px;
+   }
+
+   .premium-cars{
+    flex-direction: column;
+   }
+
+   .home-lambo{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    min-height: 0;
+   }
+
+   .home-lambo img{
+    width: 55%;
+    height: auto;
+    opacity: 0.75;
+    clip-path: none;
+    position: relative;
+    z-index: 1;
+   }
+
+   .home-lambo h2{
+    width: 45%;
+    font-size: 28px;
+    color: orangered;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    transform: translateX(10px);
+    padding: 10px;
+   }
+
+   .home-lambo::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 42%;
+    background-color: orangered;
+    top: 26%;
+    left: 59%;
+    transform: rotate(8deg);
+    opacity: 0.5;
+    z-index: 2;
+   }
+
+   .home-lambo::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 30%;
+    background-color: orangered;
+    top: 28%;
+    left: 57%;
+    transform: rotate(-35deg);
+    opacity: 0.5;
+    z-index: 2;
+   }
+
+   .home-ferrari{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    overflow: visible;
+    min-height: 0;
+   }
+
+   .home-ferrari img{
+    width: 50%;
+    height: auto;
+    opacity: 0.75;
+    clip-path: none;
+    position: relative;
+    z-index: 1;
+   }
+
+   .home-ferrari-copy{
+    width: 45%;
+    font-size: 28px;
+    color: orangered;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    transform: translateX(-30px);
+   }
+
+   .home-ferrari::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 70%;
+    background-color: orangered;
+    top: 27%;
+    left: 46%;
+    transform: rotate(-8deg);
+    opacity: 0.5;
+    z-index: 2;
+   }
+
+   .home-ferrari::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 90%;
+    background-color: orangered;
+    top: 20%;
+    left: 44%;
+    transform: rotate(35deg);
+    opacity: 0.5;
+    z-index: 2;
+   }
+
+   .home-ferrari .ferrari-copy p {
+    font-size: 16px;
+    align-items: flex-end;
+    overflow-wrap: anywhere;
+   }
+
+.home-ferrari p{
+    transform: none;
+    top: 20px;
+}
+
+.about-content{
+    position: relative;
+}
+
+.about-content p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 85%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.7;
+    color: white;
+    z-index: 2;
+}
+
+.about-content::before{
+    width: 180px;
+    left: 10px;
+    
+}
+
+.about-line-right::after{
+    width: 150px;
+    right: 27px;
+}
+
+#char-count{
+    text-align: right;
+}
+
+}
+
+
+/*THANK YOU PAGE*/
+.thanks-page{
+    min-height: 100vh;
+    background-color: #111111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.back-button{
+    display: inline-block;
+    background-color: orangered;
+    color: #111111;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+
+.back-button:hover{
+    background-color: #ffaa33;
+    transform: translateY(-3px);
+}
+
+.thanks-page h1{
+    color: orangered;
+}

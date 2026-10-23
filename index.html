@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>GARYU EXOTIC MOTORS|スーパーカー販売・カスタム</title>
+        <meta name="description" content="厳選されたスーパーカーの販売と、唯一無二のカスタムを提供するGARYU EXOTIC MOTORS">
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+
+    <body>
+        <header class="top-header">
+            <h1>GARYU EXOTIC MOTORS</h1>
+            <p>BEYOND THE ORDINARY.</p>
+        </header>
+
+        <nav class="main-nav">
+                <ul class="menu">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#stock">STOCK</a></li>
+                    <li><a href="#custom">CUSTOM</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+        </nav>
+            
+        <section id="home">
+           <div class="home-lambo">
+             <h2>SUPER CARS. REDEFINED.</h2>
+             <img src="super-cars.jpeg">
+           </div>
+           <div class="home-ferrari">
+            <div class="ferrari-copy">
+             <p>厳選されたスーパーカーの販売と、<br>唯一無二のカスタムを。</p>
+             
+            </div>
+             <img src="super-cars2.jpeg">
+            </div>
+        </section>
+
+        <section id="stock">
+            <h2>STOCK CARS</h2>
+            <p>厳選されたプレミアムカーをご覧ください。</p>
+        　<div class="premium-cars">
+            <div class="car-card">
+                <p>LAMBORGHINI AVENTADOR SVJ</p>
+                <img src="super-cars3.jpg">
+                <p>￥68,000,000~</p>
+            </div>
+            <div class="car-card">
+                <p>FERRARI DAYTONA SP3</p>
+                <img src="super-cars4.jpg">
+                <p>￥52,000,000~</p>
+            </div>
+            <div class="car-card">
+                <p>PORSCHE 911 GT3 RS</p>
+                <img src="super-cars5.jpeg">
+                <p>￥38,000,000~</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="custom">
+            <h2>CUSTOM</h2>
+            <p>YOUR VISION. OUR CRAFT.</p>
+            <div class="cars-custom">
+                <div class="body-kit">
+                    <h3>BODY KIT</h3>
+                 <div class="body-kit-track">
+                    <img src="lanborghini-ver-1.jpg">
+                    <img src="ferrari-daytona1.webp">
+                    <img src="porsche-gt3.jpg">
+                 </div>
+                </div>
+                <div class="wheels">
+                    <h3>WHEELS</h3>
+                 <div class="wheels-track">
+                    <img src="wheels-1.jpg">
+                    <img src="wheels-2.webp">
+                    <img src="wheels-3.jpg">
+                 </div>
+                </div>
+                <div class="paint">
+                    <h3>PAINT</h3>
+                    <div class="paint-track">
+                        <img src="color-1.jpg">
+                        <img src="color-2.png">
+                        <img src="color-3.webp">
+                    </div>
+                </div>
+                <div class="interior">
+                    <h3>INTERIOR</h3>
+                    <div class="interior-track">
+                        <img src="interior-1.webp">
+                        <img src="interior-2.jpg">
+                        <img src="interior-3.jpg">
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <section id="about">
+            <h2>ABOUT US</h2>
+          <div class="about-content">
+            <div class="about-line-right"></div>
+            <img src="super-cars7.jpg">
+            <p>GARYU EXOTIC MOTORSは、<br>スーパーカー販売とカスタムを手掛ける<br>プレミアムカーショップです。<br>
+                一台一台の個性を最大限に引き出し、<br>オーナーだけの特別な一台を創り上げます。</p>
+          </div>                
+        </section>
+
+        <section id="contact">
+            <h2>CONTACT</h2>
+            <p>車両・カスタムに関する問い合わせはこちら</p>
+            <form id="contact-form" action="https://formspree.io/f/xyekogqd" method="post">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="お名前" required maxlength="100">
+                <label>E-mail Address</label>
+                <input type="email" name="email" placeholder="メールアドレス" required maxlength="254">
+                <label>Inquiry Type</label>
+                <select name="inquiry_type">
+                    <option>車両購入</option>
+                    <option>カスタム</option>
+                    <option>その他</option>
+                </select>
+                <label>Message</label>
+                <textarea name="message" placeholder="お問い合わせ内容入力" required maxlength="1000"></textarea>
+                <p id="char-count">残り1000文字</p>
+                <div class="g-recaptcha" data-sitekey="6Lc7V_wtAAAAAGT7RpHtO0o539uW_zhEjb2xnf7g"></div>
+                <button type="submit" data-fs-submit-btn>SEND MESSAGE</button>
+                <div data-fs-error></div>
+            </form>
+        </section>
+
+        <footer>
+            <p>GARYU EXOTIC MOTORS</p>
+            <nav>
+                <a href="#home">HOME</a>
+                <a href="#stock">STOCK</a>
+                <a href="#custom">CUSTOM</a>
+                <a href="#about">ABOUT</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+            <p>©　2026　GARYU　EXOTIC　MOTORS</p>
+        </footer>
+        <script src="script.js"></script>
+        <script>
+        window.formspree=window.formspree||function(){
+            (formspree.q=formspree.q||[]).push(arguments);
+        };
+        formspree("initForm",{
+            formElement:"#contact-form",
+            formId:"xyekogqd",
+            onSuccess:function(){
+                window.location.href="thanks.html";
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+    </body>
+</html>
