@@ -1,0 +1,29 @@
+{
+  "name": "garyu.index",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script-backup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/um337531-cmd/garyu-exotic-motors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/um337531-cmd/garyu-exotic-motors/issues"
+  },
+  "homepage": "https://github.com/um337531-cmd/garyu-exotic-motors#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "prettier": "3.9.10",
+    "stylelint": "^17.16.0",
+    "stylelint-config-standard": "^40.0.0"
+  }
+}
