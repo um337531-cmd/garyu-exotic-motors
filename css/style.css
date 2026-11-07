@@ -6,12 +6,12 @@ body{
     background-color: black;
     color: white;
     margin: 0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
 
 .top-header{
     min-height: 100vh;
-    background-image: url(super-car.jpg);
+    background-image: url("garyu-1.jpg");
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -103,7 +103,6 @@ body{
     font-size: 70px;
     letter-spacing: 4px;
     font-weight: 900;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 10px;
     padding: 40px;
     text-align: center;
 }
@@ -125,7 +124,7 @@ body{
     display: flex;
 }
 
-ferrari-copy{
+.ferrari-copy{
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -135,11 +134,11 @@ ferrari-copy{
 }
 
 .home-ferrari p{
-    font-size: 40px;
+    font-size: 35px;
     font-family: "Yu Mincho",serif;
     color: orangered;
     width: 100%;
-    transform: translateX(30px);
+    transform: translateX(20px);
     position: relative;
     top: 40px;
 }
@@ -184,6 +183,15 @@ ferrari-copy{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.car-card p{
+    font-size: 30px;
+}
+
+.car-card p:first-child{
+    font-weight: 700;
+    font-size: 18px;
+}
+
 #stock p{
     text-align: center;
 }
@@ -203,15 +211,6 @@ ferrari-copy{
     width: 100%;
     height: 250px;
     object-fit: cover;
-}
-
-.car-card p::first-child{
-    font-weight: 700;
-    font-size: 18px;
-}
-
-.car-card p{
-    font-size: 30px;
 }
 
 #custom h2{
@@ -236,28 +235,6 @@ ferrari-copy{
     transition: opacity 1s ease;
 }
 
-.body-kit img:first-child{
-    object-position: center 70%;
-}
-
-.body-kit img.active{
-    opacity: 1;
-}
-
-.body-kit-track{
-    position: relative;
-    height: 250px;
-}
-
-@keyframes bodyKitSlide{
-    0%{
-        transform: translateX(0);
-    }
-        100%{
-            transform: translateX(-100%);
-        }
-}
-
 .wheels img{
     height: 250px;
     width: 100%;
@@ -270,15 +247,6 @@ ferrari-copy{
 
 }
 
-.wheels img.active{
-    opacity: 1;
-}
-
-.wheels-track{
-    position: relative;
-    height: 250px;
-}
-
 .paint-track img{
     height: 250px;
     width: 100%;
@@ -288,6 +256,55 @@ ferrari-copy{
     top: 0;
     left: 0;
     position: absolute;
+}
+
+.interior-track img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.body-kit img:first-child{
+    object-position: center 63%;
+}
+
+.body-kit img:nth-child(2){
+    object-position: center 70%;
+}
+
+.body-kit img:last-child{
+    object-position: center 37%;
+}
+
+.body-kit img.active{
+    opacity: 1;
+}
+
+.body-kit-track{
+    position: relative;
+    height: 250px;
+}
+
+.wheels img:first-child{
+    object-position: center 60%;
+}
+
+.wheels img.active{
+    opacity: 1;
+}
+
+.wheels-track{
+    position: relative;
+    height: 250px;
+}
+
+.paint img:nth-child(2){
+    object-position: center 56%;
 }
 
 .paint img.active{
@@ -304,18 +321,7 @@ ferrari-copy{
 }
 
 .paint-track img:last-child{
-    object-position: center 60%;
-}
-
-.interior-track img{
-    height: 250px;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease;
-    top: 0;
-    left: 0;
-    position: absolute;
+    object-position: center 53%;
 }
 
 .interior img.active{
@@ -332,7 +338,7 @@ ferrari-copy{
 }
 
 .interior-track img:nth-child(2){
-    object-position: 25%;
+    object-position: center  45%;
 }
 
 .interior-track img:last-child{
@@ -429,8 +435,9 @@ ferrari-copy{
 }
 
 #contact{
-    padding: 80px,0;
+    padding: 80px 0;
 }
+
 #contact form{
     max-width: 600px;
     margin: auto;
@@ -492,8 +499,8 @@ ferrari-copy{
 }
 
 #contact button:hover{
-    background-color: #ffffff;
-    color: #111111;
+    background-color: #fff;
+    color: #111;
 }
 
 footer{
@@ -516,11 +523,11 @@ footer a:hover{
     color: orangered;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (width<=768px){
    .top-header{
     padding: 0;
     min-height: 35vh;
-    background-position: center top;
+    background-position: center -35px;
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-color: black;
@@ -529,6 +536,7 @@ footer a:hover{
 
    .top-header h1{
     font-size: 24px;
+    margin-top: 55px;
    }
 
    .main-nav .menu{
@@ -557,6 +565,7 @@ footer a:hover{
 
    .home-lambo{
     position: relative;
+    top: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -582,17 +591,18 @@ footer a:hover{
     z-index: 3;
     transform: translateX(10px);
     padding: 10px;
+    margin: 0;
    }
 
    .home-lambo::before{
     content: "";
     position: absolute;
     width: 2px;
-    height: 42%;
+    height: 70%;
     background-color: orangered;
-    top: 26%;
-    left: 59%;
-    transform: rotate(8deg);
+    top: 22%;
+    left: 49%;
+    transform: rotate(12deg);
     opacity: 0.5;
     z-index: 2;
    }
@@ -603,81 +613,67 @@ footer a:hover{
     width: 1px;
     height: 30%;
     background-color: orangered;
-    top: 28%;
-    left: 57%;
+    top: 38%;
+    left: 49%;
     transform: rotate(-35deg);
     opacity: 0.5;
     z-index: 2;
    }
 
    .home-ferrari{
-    position: relative;
     display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    overflow: visible;
-    min-height: 0;
+    flex-direction: column-reverse;
+    align-items: stretch;
    }
 
    .home-ferrari img{
-    width: 50%;
+    width: 100%;
     height: auto;
-    opacity: 0.75;
     clip-path: none;
-    position: relative;
-    z-index: 1;
+    top: 0;
    }
 
-   .home-ferrari-copy{
-    width: 45%;
-    font-size: 28px;
+   .home-ferrari .ferrari-copy{
+    width: 100%;
+    padding: 3px 0 28px;
+    transform: none;
+   }
+
+   .home-ferrari .ferrari-copy p{
+    width: 85%;
+    margin: 0 auto;
+    padding: 14px 12px;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 1.6;
     color: orangered;
     text-align: center;
+    text-wrap: balance;
     position: relative;
-    z-index: 3;
-    transform: translateX(-30px);
-   }
-
-   .home-ferrari::before{
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 70%;
-    background-color: orangered;
-    top: 27%;
-    left: 46%;
-    transform: rotate(-8deg);
-    opacity: 0.5;
-    z-index: 2;
-   }
-
-   .home-ferrari::after{
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 90%;
-    background-color: orangered;
-    top: 20%;
-    left: 44%;
-    transform: rotate(35deg);
-    opacity: 0.5;
-    z-index: 2;
-   }
-
-   .home-ferrari .ferrari-copy p {
-    font-size: 16px;
-    align-items: flex-end;
-    overflow-wrap: anywhere;
-   }
-
-.home-ferrari p{
+    border: 2px solid rgba(255, 100, 50, 0.45);
     transform: none;
-    top: 20px;
+   }
+
+   .home-ferrari .ferrari-copy p::after{
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(255, 100, 50, 0.45);
+    pointer-events: none;
+   }
+
+   .home-ferrari::before,
+   .home-ferrari::after{
+    display: none;
+   }
+
+#shock{
+    padding-top: 40px;
 }
 
-.about-content{
-    position: relative;
-}
+   #shock h2{
+    margin-top: 0;
+   }
 
 .about-content p{
     position: absolute;
@@ -690,6 +686,10 @@ footer a:hover{
     line-height: 1.7;
     color: white;
     z-index: 2;
+} 
+
+.about-content{
+    position: relative;
 }
 
 .about-content::before{
@@ -710,10 +710,10 @@ footer a:hover{
 }
 
 
-/*THANK YOU PAGE*/
+/* THANK YOU PAGE */
 .thanks-page{
     min-height: 100vh;
-    background-color: #111111;
+    background-color: #111;
     color: white;
     display: flex;
     flex-direction: column;
@@ -727,7 +727,7 @@ footer a:hover{
 .back-button{
     display: inline-block;
     background-color: orangered;
-    color: #111111;
+    color: #111;
     padding: 15px 35px;
     text-decoration: none;
     border-radius: 6px;
@@ -737,10 +737,128 @@ footer a:hover{
 }
 
 .back-button:hover{
-    background-color: #ffaa33;
+    background-color: #fa3;
     transform: translateY(-3px);
 }
 
 .thanks-page h1{
     color: orangered;
+}
+
+/* タブレット・大きめ */
+@media(1025px <= width <= 1280px){
+    .top-header{
+        min-height: 70vh;
+    }
+
+    .menu{
+        gap: 50px;
+    }
+
+    .menu a{
+        font-size: 26px;
+    }
+
+    .home-ferrari .ferrari-copy p {
+        font-size: clamp(24px, 2.5vw, 30px);
+        line-height: 1.6;
+        text-wrap: balance;
+    }
+    
+    .home-ferrari::before{
+        z-index: 2;
+        left: 570px;
+        opacity: 0.5;
+    }
+    
+    .home-ferrari::after {
+        left: 580px;
+        opacity: 0.5;
+    }
+
+    .about-content::before{
+        width: 670px;
+        opacity: 0.8;
+    }
+
+    .about-content::after{
+        opacity: 0.8;
+    }
+
+    .about-line-right::after{
+       content: "";
+    position: absolute;
+    width: 490px;
+    height: 3px;
+    background-color: orangered;
+    top: 70%;
+    right: -59px;
+    transform: rotate(-45deg);
+    opacity: 0.8;
+    }
+}
+
+/* タブレット・小さめ */
+@media(769px <= width <= 1024px){
+    .top-header{
+        min-height: 80vh;
+    }
+    
+    .menu{
+        gap: 25px;
+    }
+
+    .menu a{
+        font-size: 18px;
+    }
+
+    .home-ferrari::before{
+        z-index: 2;
+        left: 350px;
+        opacity: 0.4;
+    }
+
+    .home-ferrari::after{
+        left: 330px;
+        opacity: 0.4;
+    }
+
+    .home-ferrari .ferrari-copy p{
+         font-size: clamp(16px, 2.5vw, 22px);
+        line-height: 1.6;
+        text-wrap: balance;
+    }
+
+   .premium-cars{
+    flex-direction: column;
+    align-items: stretch;
+   }
+
+   .premium-cars .car-card img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+   }
+
+   .about-content p{
+    font-size: 29px;
+    text-wrap: balance;
+    width: 85%;
+    text-align: center;
+   }
+
+   .about-content::before{
+    width: 498px;
+   }
+
+   .about-content::after{
+    opacity: 0.6;
+   }
+
+   .about-line-right::after{
+    width: 400px;
+    top: 72%;
+    right: -57px;
+   }
 }
