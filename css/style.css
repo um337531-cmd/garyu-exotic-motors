@@ -1,530 +1,538 @@
-*{
-    box-sizing: border-box;
-}
-
-body{
-    background-color: black;
-    color: white;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.top-header{
-    min-height: 100vh;
-    background-image: url("garyu-1.jpg");
-    background-size: cover;
-    background-position: center center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 2s ease;
-}
-
-.menu{
-    display: flex;
-    justify-content: center;
-    gap: 70px;
-    list-style: none;
-}
-
-.menu a{
-    text-decoration: none;
-    color: black;
-    font-size: 40px;
-    font-weight: 600;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    border: 1px solid black;
-    padding: 10px 20px;
-    position: relative;
-    letter-spacing: 2px;
-    transition: 0.8s;
-}
-
-.menu a::after{
-    content: "";
-    position: absolute;
-    border: 1px solid black;
-    inset: 0;
-    transform: translate(8px, 8px);
-    pointer-events: none;
-}
-
-.menu a:hover{
-    background-color: black;
-    color: orangered;
-}
-
-.main-nav{
-    background-color: orangered;
-    padding: 50px;
-    opacity: 0;
-    transition: opacity 2s ease;
-}
-
-.home-lambo{
-    position: relative;
-    opacity: 0;
-    transition: opacity 2s ease;
-    display: flex;
-    flex-direction: row-reverse;
-    min-height: 500px;
-}
-
-.home-lambo::after{
-    content: "";
-    position: absolute;
-    background-color: orangered;
-    width: 3px;
-    height: 100%;
-    left: 47%;
-    transform: rotate(10deg);
-    top: 0;
-}
-
-.home-lambo::before{
-    content: "";
-    position: absolute;
-    background-color: orangered;
-    width: 1px;
-    height: 60%;
-    transform: rotate(-30deg);
-    left: 50%;
-    z-index: 2;
-}
-
-.home-lambo h2{
-    display: flex;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-    color: orangered;
-    font-size: 70px;
-    letter-spacing: 4px;
-    font-weight: 900;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 40px;
-    text-align: center;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.top-header {
+  min-height: 100vh;
+  background-image: url("garyu-1.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border: 1px solid black;
+  padding: 10px 20px;
+  position: relative;
+  letter-spacing: 2px;
+  transition: 0.8s;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  border: 1px solid black;
+  inset: 0;
+  transform: translate(8px, 8px);
+  pointer-events: none;
+}
+
+.menu a:hover {
+  background-color: black;
+  color: orangered;
+}
+
+.main-nav {
+  background-color: orangered;
+  padding: 50px;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.home-lambo {
+  position: relative;
+  opacity: 0;
+  transition: opacity 2s ease;
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 500px;
+}
+
+.home-lambo::after {
+  content: "";
+  position: absolute;
+  background-color: orangered;
+  width: 3px;
+  height: 100%;
+  left: 47%;
+  transform: rotate(10deg);
+  top: 0;
+}
+
+.home-lambo::before {
+  content: "";
+  position: absolute;
+  background-color: orangered;
+  width: 1px;
+  height: 60%;
+  transform: rotate(-30deg);
+  left: 50%;
+  z-index: 2;
+}
+
+.home-lambo h2 {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  color: orangered;
+  font-size: 70px;
+  letter-spacing: 4px;
+  font-weight: 900;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 40px;
+  text-align: center;
+}
+
+.home-lambo img {
+  display: block;
+  width: 50%;
+  object-fit: cover;
+  object-position: left center;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    94% 20%,
+    100% 35%,
+    91% 55%,
+    97% 70%,
+    85% 100%,
+    0 100%
+  );
+  position: relative;
 }
 
-.home-lambo img{
-    display: block;
-    width: 50%;
-    object-fit: cover;
-    object-position: left center;
-    clip-path: polygon(0 0,100% 0,94% 20%,100% 35%,91% 55%,97% 70%,85% 100%,0 100%
-    );
-    position: relative;
+.home-ferrari {
+  position: relative;
+  opacity: 0;
+  transition: opacity 2.5s ease;
+  display: flex;
 }
 
-.home-ferrari{
-    position: relative;
-    opacity: 0;
-    transition: opacity 2.5s ease;
-    display: flex;
+.ferrari-copy {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
 }
 
-.ferrari-copy{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;align-items: center;
-    padding: 40px;
-    text-align: center;
-}
-
-.home-ferrari p{
-    font-size: 35px;
-    font-family: "Yu Mincho",serif;
-    color: orangered;
-    width: 100%;
-    transform: translateX(20px);
-    position: relative;
-    top: 40px;
-}
-
-.home-ferrari img{
-    display: block;
-    margin-left: auto;
-    width: 50%;
-    object-fit: cover;
-    clip-path: polygon(12% 0,100% 0,100% 100%,0 100%);
-}
-
-.home-ferrari::after{
-    content: "";
-    position: absolute;
-    background-color: orangered;
-    width: 3px;
-    height: 100%;
-    left: 50%;
-    transform: rotate(-7deg);
-}
-
-.home-ferrari::before{
-    content: "";
-    position: absolute;
-    background-color: orangered;
-    width: 1px;
-    height: 80%;
-    left: 665px;
-    transform: rotate(35deg);
-
-}
-
-.show{
-    opacity: 1;
-}
+.home-ferrari p {
+  font-size: 35px;
+  font-family: "Yu Mincho", serif;
+  color: orangered;
+  width: 100%;
+  transform: translateX(20px);
+  position: relative;
+  top: 40px;
+}
+
+.home-ferrari img {
+  display: block;
+  margin-left: auto;
+  width: 50%;
+  object-fit: cover;
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.home-ferrari::after {
+  content: "";
+  position: absolute;
+  background-color: orangered;
+  width: 3px;
+  height: 100%;
+  left: 50%;
+  transform: rotate(-7deg);
+}
+
+.home-ferrari::before {
+  content: "";
+  position: absolute;
+  background-color: orangered;
+  width: 1px;
+  height: 80%;
+  left: 665px;
+  transform: rotate(35deg);
+}
+
+.show {
+  opacity: 1;
+}
 
-#stock h2{
-    font-size: 60px;
-    color: orangered;
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+#stock h2 {
+  font-size: 60px;
+  color: orangered;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-.car-card p{
-    font-size: 30px;
+.car-card p {
+  font-size: 30px;
 }
 
-.car-card p:first-child{
-    font-weight: 700;
-    font-size: 18px;
+.car-card p:first-child {
+  font-weight: 700;
+  font-size: 18px;
 }
 
-#stock p{
-    text-align: center;
+#stock p {
+  text-align: center;
 }
 
-.premium-cars{
-    display: flex;
-    gap: 30px;
+.premium-cars {
+  display: flex;
+  gap: 30px;
 }
 
-.car-card{
-    flex: 1;
-    padding: 20px;
-    border: 2px solid orangered;
+.car-card {
+  flex: 1;
+  padding: 20px;
+  border: 2px solid orangered;
 }
 
-.car-card img{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+.car-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
-#custom h2{
-    font-size: 60px;
-    color: orangered;
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+#custom h2 {
+  font-size: 60px;
+  color: orangered;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-#custom p{
-    text-align: center;
-    color: orangered;
+#custom p {
+  text-align: center;
+  color: orangered;
 }
 
-.body-kit img{
-    height: 250px;
-    width: 100%;
-    flex-shrink: 0;
-    object-fit: cover;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease;
+.body-kit img {
+  height: 250px;
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
-
-.wheels img{
-    height: 250px;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease;
-    top: 0;
-    left: 0;
-    position: absolute;
 
+.wheels img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 
-.paint-track img{
-    height: 250px;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease;
-    top: 0;
-    left: 0;
-    position: absolute;
+.paint-track img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 
-.interior-track img{
-    height: 250px;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease;
-    top: 0;
-    left: 0;
-    position: absolute;
+.interior-track img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 
-.body-kit img:first-child{
-    object-position: center 63%;
+.body-kit img:first-child {
+  object-position: center 63%;
 }
 
-.body-kit img:nth-child(2){
-    object-position: center 70%;
+.body-kit img:nth-child(2) {
+  object-position: center 70%;
 }
 
-.body-kit img:last-child{
-    object-position: center 37%;
+.body-kit img:last-child {
+  object-position: center 37%;
 }
 
-.body-kit img.active{
-    opacity: 1;
+.body-kit img.active {
+  opacity: 1;
 }
 
-.body-kit-track{
-    position: relative;
-    height: 250px;
+.body-kit-track {
+  position: relative;
+  height: 250px;
 }
 
-.wheels img:first-child{
-    object-position: center 60%;
+.wheels img:first-child {
+  object-position: center 60%;
 }
 
-.wheels img.active{
-    opacity: 1;
+.wheels img.active {
+  opacity: 1;
 }
 
-.wheels-track{
-    position: relative;
-    height: 250px;
+.wheels-track {
+  position: relative;
+  height: 250px;
 }
 
-.paint img:nth-child(2){
-    object-position: center 56%;
+.paint img:nth-child(2) {
+  object-position: center 56%;
 }
 
-.paint img.active{
-    opacity: 1;
+.paint img.active {
+  opacity: 1;
 }
 
-.paint-track{
-    position: relative;
-    height: 250px;
+.paint-track {
+  position: relative;
+  height: 250px;
 }
 
-.paint-track img:first-child{
-    object-position: center 70%;
+.paint-track img:first-child {
+  object-position: center 70%;
 }
 
-.paint-track img:last-child{
-    object-position: center 53%;
+.paint-track img:last-child {
+  object-position: center 53%;
 }
 
-.interior img.active{
-    opacity: 1;
+.interior img.active {
+  opacity: 1;
 }
 
-.interior-track{
-    position: relative;
-    height: 250px;
+.interior-track {
+  position: relative;
+  height: 250px;
 }
 
-.interior-track img:first-child{
-    object-position: center 60%;
+.interior-track img:first-child {
+  object-position: center 60%;
 }
 
-.interior-track img:nth-child(2){
-    object-position: center  45%;
+.interior-track img:nth-child(2) {
+  object-position: center 45%;
 }
 
-.interior-track img:last-child{
-    object-position: center 60%;
+.interior-track img:last-child {
+  object-position: center 60%;
 }
 
-#about{
-    padding: 80px 0;
+#about {
+  padding: 80px 0;
 }
 
-#about h2{
-    text-align: center;
-    font-size: 60px;
-    color: orangered;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+#about h2 {
+  text-align: center;
+  font-size: 60px;
+  color: orangered;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-#about img{
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    opacity: 0.4;
+#about img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.4;
 }
 
-.about-content{
-    position: relative;
+.about-content {
+  position: relative;
 }
 
-.about-content p{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 37px;
-    color:white;
-    font-family: "Yu Mincho","Hiragino Mincho ProN",serif;
+.about-content p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 37px;
+  color: white;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
 }
 
-.about-content::before{
-    content: "";
-    position: absolute;
-    width: 700px;
-    height: 3px;
-    background-color: orangered;
-    top: 42%;
-    left: -200px;
-    transform: rotate(-60deg);
+.about-content::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 3px;
+  background-color: orangered;
+  top: 42%;
+  left: -200px;
+  transform: rotate(-60deg);
 }
 
-.about-content::after{
-    content: "";
-    position: absolute;
-    width: 300px;
-    height: 3px;
-    background-color: orangered;
-    top: 30%;
-    left: -30px;
-    transform: rotate(20deg);
+.about-content::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 3px;
+  background-color: orangered;
+  top: 30%;
+  left: -30px;
+  transform: rotate(20deg);
 }
 
-.about-line-right::before{
-    content: "";
-    position: absolute;
-    width: 300px;
-    height: 3px;
-    background-color: orangered;
-    top: 70%;
-    right: -13px;
-    transform: rotate(25deg);
+.about-line-right::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 3px;
+  background-color: orangered;
+  top: 70%;
+  right: -13px;
+  transform: rotate(25deg);
 }
 
-.about-line-right::after{
-    content: "";
-    position: absolute;
-    width: 600px;
-    height: 3px;
-    background-color: orangered;
-    top: 70%;
-    right: -60px;
-    transform: rotate(-45deg);
+.about-line-right::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 3px;
+  background-color: orangered;
+  top: 70%;
+  right: -60px;
+  transform: rotate(-45deg);
 }
 
-#contact h2{
-    text-align: center;
-    font-size: 60px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: orangered;
+#contact h2 {
+  text-align: center;
+  font-size: 60px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: orangered;
 }
 
-#contact > p{
-    text-align: center;
-    margin-bottom: 40px;
-    color: white;
+#contact > p {
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
 }
 
-#contact{
-    padding: 80px 0;
+#contact {
+  padding: 80px 0;
 }
 
-#contact form{
-    max-width: 600px;
-    margin: auto;
+#contact form {
+  max-width: 600px;
+  margin: auto;
 }
 
-#contact input{
-    width: 100%;
-    padding: 15px 20px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #555;
-    background-color: #1a1a1a;
-    color: white;
+#contact input {
+  width: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #555;
+  background-color: #1a1a1a;
+  color: white;
 }
 
-#contact label{
-    font-weight: bold;
-    color: white;
-    display: block;
-    margin-bottom: 8px;
+#contact label {
+  font-weight: bold;
+  color: white;
+  display: block;
+  margin-bottom: 8px;
 }
 
-#contact select{
-    width: 100%;
-    padding: 15px 20px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #555;
-    background-color: #1a1a1a;
-    color: white;
+#contact select {
+  width: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #555;
+  background-color: #1a1a1a;
+  color: white;
 }
 
-#contact textarea{
-    width: 100%;
-    padding: 15px 20px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #555;
-    background-color: #1a1a1a;
-    color: white;
-    min-height: 150px;
-    resize: vertical;
+#contact textarea {
+  width: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #555;
+  background-color: #1a1a1a;
+  color: white;
+  min-height: 150px;
+  resize: vertical;
 }
 
-#contact button{
-    width: 100%;
-    padding: 15px 20px;
-    background-color: orangered;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-   transition: background-color 0.3s;
+#contact button {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-#contact button:hover{
-    background-color: #fff;
-    color: #111;
+#contact button:hover {
+  background-color: #fff;
+  color: #111;
 }
 
-footer{
-    background-color: #111;
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-    border-top: 1px solid #333;
+footer {
+  background-color: #111;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 1px solid #333;
 }
 
-footer a{
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 40px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-footer a:hover{
-    color: orangered;
+footer a:hover {
+  color: orangered;
 }
 
-@media screen and (width<=768px){
-   .top-header{
+@media screen and (width<=768px) {
+  .top-header {
     padding: 0;
     min-height: 35vh;
     background-position: center -35px;
@@ -532,14 +540,14 @@ footer a:hover{
     background-repeat: no-repeat;
     background-color: black;
     justify-content: flex-start;
-   }
+  }
 
-   .top-header h1{
+  .top-header h1 {
     font-size: 24px;
     margin-top: 55px;
-   }
+  }
 
-   .main-nav .menu{
+  .main-nav .menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -547,23 +555,23 @@ footer a:hover{
     padding: 10px;
     margin: 0;
     list-style: none;
-   }
+  }
 
-   .menu a{
+  .menu a {
     font-size: 16px;
     padding: 8px 10px;
     letter-spacing: 1px;
-   }
+  }
 
-   .main-nav{
+  .main-nav {
     padding: 15px;
-   }
+  }
 
-   .premium-cars{
+  .premium-cars {
     flex-direction: column;
-   }
+  }
 
-   .home-lambo{
+  .home-lambo {
     position: relative;
     top: 0;
     display: flex;
@@ -571,18 +579,18 @@ footer a:hover{
     align-items: center;
     overflow: hidden;
     min-height: 0;
-   }
+  }
 
-   .home-lambo img{
+  .home-lambo img {
     width: 55%;
     height: auto;
     opacity: 0.75;
     clip-path: none;
     position: relative;
     z-index: 1;
-   }
+  }
 
-   .home-lambo h2{
+  .home-lambo h2 {
     width: 45%;
     font-size: 28px;
     color: orangered;
@@ -592,9 +600,9 @@ footer a:hover{
     transform: translateX(10px);
     padding: 10px;
     margin: 0;
-   }
+  }
 
-   .home-lambo::before{
+  .home-lambo::before {
     content: "";
     position: absolute;
     width: 2px;
@@ -605,9 +613,9 @@ footer a:hover{
     transform: rotate(12deg);
     opacity: 0.5;
     z-index: 2;
-   }
+  }
 
-   .home-lambo::after{
+  .home-lambo::after {
     content: "";
     position: absolute;
     width: 1px;
@@ -618,28 +626,28 @@ footer a:hover{
     transform: rotate(-35deg);
     opacity: 0.5;
     z-index: 2;
-   }
+  }
 
-   .home-ferrari{
+  .home-ferrari {
     display: flex;
     flex-direction: column-reverse;
     align-items: stretch;
-   }
+  }
 
-   .home-ferrari img{
+  .home-ferrari img {
     width: 100%;
     height: auto;
     clip-path: none;
     top: 0;
-   }
+  }
 
-   .home-ferrari .ferrari-copy{
+  .home-ferrari .ferrari-copy {
     width: 100%;
     padding: 3px 0 28px;
     transform: none;
-   }
+  }
 
-   .home-ferrari .ferrari-copy p{
+  .home-ferrari .ferrari-copy p {
     width: 85%;
     margin: 0 auto;
     padding: 14px 12px;
@@ -652,141 +660,142 @@ footer a:hover{
     position: relative;
     border: 2px solid rgba(255, 100, 50, 0.45);
     transform: none;
-   }
+  }
 
-   .home-ferrari .ferrari-copy p::after{
+  .home-ferrari .ferrari-copy p::after {
     content: "";
     position: absolute;
     inset: 6px;
     border: 1px solid rgba(255, 100, 50, 0.45);
     pointer-events: none;
-   }
+  }
 
-   .home-ferrari::before,
-   .home-ferrari::after{
+  .home-ferrari::before,
+  .home-ferrari::after {
     display: none;
-   }
+  }
 
-#shock{
+  #shock {
     padding-top: 40px;
-}
+  }
 
-   #shock h2{
+  #shock h2 {
     margin-top: 0;
-   }
+  }
 
-.about-content p{
+  .about-content p {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 85%;
     text-align: center;
     font-size: 16px;
     line-height: 1.7;
     color: white;
     z-index: 2;
-} 
+  }
 
-.about-content{
+  .about-content {
     position: relative;
-}
+  }
 
-.about-content::before{
+  .about-content::before {
     width: 180px;
     left: 10px;
-    
-}
+  }
 
-.about-line-right::after{
+  .about-content::after {
+    opacity: 0.7;
+  }
+
+  .about-line-right::after {
     width: 150px;
     right: 27px;
-}
+  }
 
-#char-count{
+  #char-count {
     text-align: right;
+  }
 }
-
-}
-
 
 /* THANK YOU PAGE */
-.thanks-page{
-    min-height: 100vh;
-    background-color: #111;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
+.thanks-page {
+  min-height: 100vh;
+  background-color: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.back-button{
-    display: inline-block;
-    background-color: orangered;
-    color: #111;
-    padding: 15px 35px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-top: 25px;
-    transition: 0.3s;
+.back-button {
+  display: inline-block;
+  background-color: orangered;
+  color: #111;
+  padding: 15px 35px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 25px;
+  transition: 0.3s;
 }
 
-.back-button:hover{
-    background-color: #fa3;
-    transform: translateY(-3px);
+.back-button:hover {
+  background-color: #fa3;
+  transform: translateY(-3px);
 }
 
-.thanks-page h1{
-    color: orangered;
+.thanks-page h1 {
+  color: orangered;
 }
 
 /* タブレット・大きめ */
-@media(1025px <= width <= 1280px){
-    .top-header{
-        min-height: 70vh;
-    }
+@media (1025px <= width <= 1280px) {
+  .top-header {
+    min-height: 70vh;
+  }
 
-    .menu{
-        gap: 50px;
-    }
+  .menu {
+    gap: 50px;
+  }
 
-    .menu a{
-        font-size: 26px;
-    }
+  .menu a {
+    font-size: 26px;
+  }
 
-    .home-ferrari .ferrari-copy p {
-        font-size: clamp(24px, 2.5vw, 30px);
-        line-height: 1.6;
-        text-wrap: balance;
-    }
-    
-    .home-ferrari::before{
-        z-index: 2;
-        left: 570px;
-        opacity: 0.5;
-    }
-    
-    .home-ferrari::after {
-        left: 580px;
-        opacity: 0.5;
-    }
+  .home-ferrari .ferrari-copy p {
+    font-size: clamp(24px, 2.5vw, 30px);
+    line-height: 1.6;
+    text-wrap: balance;
+  }
 
-    .about-content::before{
-        width: 670px;
-        opacity: 0.8;
-    }
+  .home-ferrari::before {
+    z-index: 2;
+    left: 570px;
+    opacity: 0.5;
+  }
 
-    .about-content::after{
-        opacity: 0.8;
-    }
+  .home-ferrari::after {
+    left: 580px;
+    opacity: 0.5;
+  }
 
-    .about-line-right::after{
-       content: "";
+  .about-content::before {
+    width: 670px;
+    opacity: 0.8;
+  }
+
+  .about-content::after {
+    opacity: 0.8;
+  }
+
+  .about-line-right::after {
+    content: "";
     position: absolute;
     width: 490px;
     height: 3px;
@@ -795,70 +804,75 @@ footer a:hover{
     right: -59px;
     transform: rotate(-45deg);
     opacity: 0.8;
-    }
+  }
 }
 
 /* タブレット・小さめ */
-@media(769px <= width <= 1024px){
-    .top-header{
-        min-height: 80vh;
-    }
-    
-    .menu{
-        gap: 25px;
-    }
+@media (769px <= width <= 1024px) {
+  .top-header {
+    min-height: 80vh;
+  }
 
-    .menu a{
-        font-size: 18px;
-    }
+  .menu {
+    gap: 25px;
+  }
 
-    .home-ferrari::before{
-        z-index: 2;
-        left: 350px;
-        opacity: 0.4;
-    }
+  .menu a {
+    font-size: 18px;
+  }
 
-    .home-ferrari::after{
-        left: 330px;
-        opacity: 0.4;
-    }
+  .home-lambo h2 {
+    font-size: clamp(28px, 4vw, 44px);
+    padding: 16px;
+  }
 
-    .home-ferrari .ferrari-copy p{
-         font-size: clamp(16px, 2.5vw, 22px);
-        line-height: 1.6;
-        text-wrap: balance;
-    }
+  .home-ferrari::before {
+    z-index: 2;
+    left: 350px;
+    opacity: 0.4;
+  }
 
-   .premium-cars{
+  .home-ferrari::after {
+    left: 330px;
+    opacity: 0.4;
+  }
+
+  .home-ferrari .ferrari-copy p {
+    font-size: clamp(16px, 2.5vw, 22px);
+    line-height: 1.6;
+    text-wrap: balance;
+  }
+
+  .premium-cars {
     flex-direction: column;
     align-items: stretch;
-   }
+  }
 
-   .premium-cars .car-card img{
+  .premium-cars .car-card img {
     width: 100%;
     height: auto;
     object-fit: contain;
     display: block;
-   }
+  }
 
-   .about-content p{
+  .about-content p {
     font-size: 29px;
     text-wrap: balance;
     width: 85%;
     text-align: center;
-   }
+  }
 
-   .about-content::before{
+  .about-content::before {
     width: 498px;
-   }
+  }
 
-   .about-content::after{
+  .about-content::after {
     opacity: 0.6;
-   }
+  }
 
-   .about-line-right::after{
+  .about-line-right::after {
     width: 400px;
     top: 72%;
     right: -57px;
-   }
+  }
 }

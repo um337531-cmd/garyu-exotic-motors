@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link
+      rel="preload"
+      as="image"
+      href="css/garyu-1.jpg"
+      fetchpriority="high"
+    />
   </head>
 
   <body>
@@ -31,12 +37,11 @@
     <section id="home">
       <div class="home-lambo">
         <h2>SUPER CARS. REDEFINED.</h2>
-        <img src="garyu-2.jpg"  alt="Lamborghini・Aventador・blue"/>
+        <img src="garyu-2.jpg" alt="Lamborghini・Aventador・blue" />
       </div>
       <div class="home-ferrari">
         <div class="ferrari-copy">
-          <p>厳選されたスーパーカーの販売と、
-            唯一無二のカスタムを。</p>
+          <p>厳選されたスーパーカーの販売と、 唯一無二のカスタムを。</p>
         </div>
         <img src="garyu-3.jpg" alt="Ferrari・Daytona SP3・red" />
       </div>
@@ -108,12 +113,10 @@
       <h2>ABOUT US</h2>
       <div class="about-content">
         <div class="about-line-right"></div>
-        <img src="garyu-19.jpg"  alt="pagani・black"/>
+        <img src="garyu-19.jpg" alt="pagani・black" />
         <p>
-          GARYU EXOTIC MOTORSは、
-          スーパーカー販売とカスタムを手掛ける
-          プレミアムカーショップです。
-          一台一台の個性を最大限に引き出し、
+          GARYU EXOTIC MOTORSは、 スーパーカー販売とカスタムを手掛ける
+          プレミアムカーショップです。 一台一台の個性を最大限に引き出し、
           オーナーだけの特別な一台を創り上げます。
         </p>
       </div>
@@ -178,20 +181,7 @@
       <p>©　2026　GARYU　EXOTIC　MOTORS</p>
     </footer>
     <script src="script.js"></script>
-    <script>
-      window.formspree =
-        window.formspree ||
-        function () {
-          (formspree.q = formspree.q || []).push(arguments);
-        };
-      formspree("initForm", {
-        formElement: "#contact-form",
-        formId: "xyekogqd",
-        onSuccess: function () {
-          window.location.href = "thanks.html";
-        },
-      });
-    </script>
+    <script src="formspree-init.js"></script>
     <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   </body>
 </html>
