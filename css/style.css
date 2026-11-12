@@ -534,9 +534,10 @@ footer a:hover {
 @media screen and (width<=768px) {
   .top-header {
     padding: 0;
-    min-height: 35vh;
-    background-position: center -35px;
-    background-size: 100% auto;
+    min-height: 0;
+    height: 56vw;
+    background-position: center center;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: black;
     justify-content: flex-start;
