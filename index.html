@@ -130,30 +130,33 @@
         action="https://formspree.io/f/xyekogqd"
         method="post"
       >
-        <label>Name</label>
+        <label for="name">Name</label>
         <input
+          id="name"
           type="text"
           name="name"
           placeholder="お名前"
           required
           maxlength="100"
         />
-        <label>E-mail Address</label>
+        <label for="email">E-mail Address</label>
         <input
+          id="email"
           type="email"
           name="email"
           placeholder="メールアドレス"
           required
           maxlength="254"
         />
-        <label>Inquiry Type</label>
-        <select name="inquiry_type">
+        <label for="inquiry_type">Inquiry Type</label>
+        <select name="inquiry_type" name="inquiry_type">
           <option>車両購入</option>
           <option>カスタム</option>
           <option>その他</option>
         </select>
-        <label>Message</label>
+        <label for="message">Message</label>
         <textarea
+          id="message"
           name="message"
           placeholder="お問い合わせ内容入力"
           required
